@@ -20,7 +20,7 @@
         <sys_update_name>sys_restricted_caller_access_42548abc97b95150ff3676511153af0e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-03-01 10:53:29</sys_updated_on>
-        <target name="sn_hr_core_document_template" target_table="sys_db_object">29a247158751e1104d6ba8e83cbb35be</target>
+        <target name="sn_hr_core_document_template" target_table="sys_db_object">58a8ed6187956110559887b09bbb359f</target>
         <target_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</target_scope>
         <target_table>sys_db_object</target_table>
         <target_type>1</target_type>
