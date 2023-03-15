@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_hr_core_m2m_condition_criteria">
+    <sn_hr_core_m2m_condition_criteria action="INSERT_OR_UPDATE">
+        <hr_condition display_value="Location">6573262cdb1c32009aa2f4eabf96193a</hr_condition>
+        <hr_criteria display_value="US Employees Only">49f2222cdb1c32009aa2f4eabf961982</hr_criteria>
+        <sys_class_name>sn_hr_core_m2m_condition_criteria</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-01-10 17:34:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>3a84222cdb1c32009aa2f4eabf961962</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Location.US Employees Only</sys_name>
+        <sys_package display_value="Human Resources: Core" source="sn_hr_core">d4ac3fff5b311200a4656ede91f91af2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_update_name>sn_hr_core_m2m_condition_criteria_3a84222cdb1c32009aa2f4eabf961962</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-01-10 17:34:15</sys_updated_on>
+    </sn_hr_core_m2m_condition_criteria>
+</record_update>
