@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <order>100</order>
+        <published_ref/>
+        <question display_value="Would you like to edit an existing position description?">3688e28b87637410156265b73cbb355a</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-05 19:12:01</sys_created_on>
+        <sys_id>fef82a8b87637410156265b73cbb350a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Yes</sys_name>
+        <sys_package display_value="Human Resources: Core" source="sn_hr_core">d4ac3fff5b311200a4656ede91f91af2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_update_name>question_choice_fef82a8b87637410156265b73cbb350a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-05 19:12:06</sys_updated_on>
+        <text>Yes</text>
+        <value>yes</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=fef82a8b87637410156265b73cbb350a"/>
+</record_update>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_hr_core_template">
+    <sn_hr_core_template action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <assign_to/>
+        <assignment_option>named_user</assignment_option>
+        <assignment_type/>
+        <date_offset_quantity>0</date_offset_quantity>
+        <date_offset_type>on</date_offset_type>
+        <date_offset_units/>
+        <description_for_employee/>
+        <due_date_source/>
+        <global>true</global>
+        <group/>
+        <groups/>
+        <link_element/>
+        <name>Classification Request</name>
+        <next/>
+        <next_child/>
+        <owning_group/>
+        <parent_case_table>sn_hr_core_case</parent_case_table>
+        <roles/>
+        <short_description/>
+        <short_description_for_employee>Request classification of a new or existing position for your agency.</short_description_for_employee>
+        <show_on_template_bar>true</show_on_template_bar>
+        <show_translated_fields>false</show_translated_fields>
+        <stand_alone>false</stand_alone>
+        <sys_class_name>sn_hr_core_template</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-05 19:09:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4978668b87637410156265b73cbb3572</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Classification Request</sys_name>
+        <sys_package display_value="Human Resources: Core" source="sn_hr_core">d4ac3fff5b311200a4656ede91f91af2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_update_name>sn_hr_core_template_4978668b87637410156265b73cbb3572</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-20 12:58:24</sys_updated_on>
+        <table>sn_hr_core_case_talent_management</table>
+        <template>short_description=Classification Request^assigned_to=4990c2c8dbae4b00ae3e9646db961940^priority=4^state=10^</template>
+        <template_reference/>
+        <template_reference_field/>
+        <use_assignment_date>false</use_assignment_date>
+        <user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</user>
+        <view/>
+    </sn_hr_core_template>
+</record_update>

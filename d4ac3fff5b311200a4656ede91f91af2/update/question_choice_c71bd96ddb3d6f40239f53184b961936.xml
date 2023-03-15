@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <misc>0</misc>
+        <order>300</order>
+        <published_ref/>
+        <question display_value="Who would you like to Recruit?">287a952ddb3d6f40239f53184b961980</question>
+        <rec_misc>0</rec_misc>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-11-15 16:55:08</sys_created_on>
+        <sys_id>c71bd96ddb3d6f40239f53184b961936</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Agency Employees</sys_name>
+        <sys_package display_value="Human Resources: Core" source="sn_hr_core">d4ac3fff5b311200a4656ede91f91af2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_update_name>question_choice_c71bd96ddb3d6f40239f53184b961936</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-11-15 16:55:08</sys_updated_on>
+        <text>Agency Employees</text>
+        <value>agency employees</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=c71bd96ddb3d6f40239f53184b961936"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>misc</field>
+        <id>c71bd96ddb3d6f40239f53184b961936</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-11-15 16:55:08</sys_created_on>
+        <sys_id>952b51addb3d6f40239f53184b961979</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-11-15 16:55:08</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>rec_misc</field>
+        <id>c71bd96ddb3d6f40239f53184b961936</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-11-15 16:55:08</sys_created_on>
+        <sys_id>5d2b51addb3d6f40239f53184b961977</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-11-15 16:55:08</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>
