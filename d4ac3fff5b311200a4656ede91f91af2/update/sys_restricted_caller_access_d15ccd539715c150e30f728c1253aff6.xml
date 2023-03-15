@@ -7,19 +7,19 @@
         <source_scope display_value="Employee Center Pro">236addd4d75048c1a5f250d73c064976</source_scope>
         <source_table>sp_widget</source_table>
         <source_type>6</source_type>
-        <status>0</status>
+        <status>2</status>
         <sys_class_name>sys_restricted_caller_access</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2022-02-01 06:55:19</sys_created_on>
         <sys_id>d15ccd539715c150e30f728c1253aff6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>236addd4d75048c1a5f250d73c064976</sys_name>
         <sys_package display_value="Human Resources: Core" source="sn_hr_core">d4ac3fff5b311200a4656ede91f91af2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
         <sys_update_name>sys_restricted_caller_access_d15ccd539715c150e30f728c1253aff6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-02-01 06:55:19</sys_updated_on>
+        <sys_updated_on>2022-02-01 06:55:34</sys_updated_on>
         <target name="sn_hr_core_profile" target_table="sys_db_object">a7c4323e478d8110a30677fbd36d43fa</target>
         <target_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</target_scope>
         <target_table>sys_db_object</target_table>
