@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_restricted_caller_access">
+    <sys_restricted_caller_access action="INSERT_OR_UPDATE">
+        <description/>
+        <operation>execute</operation>
+        <rca_type>real_rca</rca_type>
+        <source>13300399530f23000ad0ddeeff7b122b</source>
+        <source_scope display_value="Human Resources: Parental Journey">c4ff1e762cbe2340964f0ca310007ffe</source_scope>
+        <source_table>sc_cat_item_producer</source_table>
+        <source_type>14</source_type>
+        <status>2</status>
+        <sys_class_name>sys_restricted_caller_access</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-01-16 09:08:19</sys_created_on>
+        <sys_id>abd2431d530f23000ad0ddeeff7b12ae</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>c4ff1e762cbe2340964f0ca310007ffe</sys_name>
+        <sys_package display_value="Human Resources: Core" source="sn_hr_core">d4ac3fff5b311200a4656ede91f91af2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_update_name>sys_restricted_caller_access_abd2431d530f23000ad0ddeeff7b12ae</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-02-28 08:53:29</sys_updated_on>
+        <target>e0d7bdf79f031200d9011977677fcf15</target>
+        <target_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</target_scope>
+        <target_table>sys_script_include</target_table>
+        <target_type>2</target_type>
+    </sys_restricted_caller_access>
+</record_update>
