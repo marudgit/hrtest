@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_restricted_caller_access">
+    <sys_restricted_caller_access action="INSERT_OR_UPDATE">
+        <description/>
+        <operation>write</operation>
+        <rca_type>generated</rca_type>
+        <source>9697454147b41d9049ed998c346d43bd</source>
+        <source_scope display_value="Workforce Optimization for HR">40840c842ea10110c3e6c300127d212f</source_scope>
+        <source_table>sys_script_include</source_table>
+        <source_type>2</source_type>
+        <status>2</status>
+        <sys_class_name>sys_restricted_caller_access</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2023-03-06 21:45:06</sys_created_on>
+        <sys_id>ccc00a678799611041dd4339dabb3514</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>40840c842ea10110c3e6c300127d212f</sys_name>
+        <sys_package display_value="Human Resources: Core" source="sn_hr_core">d4ac3fff5b311200a4656ede91f91af2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_update_name>sys_restricted_caller_access_ccc00a678799611041dd4339dabb3514</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-07 09:53:28</sys_updated_on>
+        <target name="sn_hr_core_case_payroll" target_table="sys_db_object">cd4a0d6f87d161103824ec2e0ebb3594</target>
+        <target_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</target_scope>
+        <target_table>sys_db_object</target_table>
+        <target_type>1</target_type>
+    </sys_restricted_caller_access>
+</record_update>
