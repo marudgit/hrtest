@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>sn_hr_core.addToUpdateSetUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Version 3.4&#13;
+Utility script to add components to update sets</description>
+        <name>addToUpdateSetUtils</name>
+        <script><![CDATA[var addToUpdateSetUtils = Class.create();
+addToUpdateSetUtils.prototype = {
+    initialize: function() {
+		this.clientSession = gs.getSession();
+    },
+	
+	checkTable: function(tableRec, tableName) {
+		/*
+		 * Scoped addToUpdateSetUtils Script Includes are useful when table Application Access settings prevent other scopes from CRUD access.
+		 * The global checkTable function is executed first and if no table match is found, then all scope checkTable functions are executed.
+		 * If a table match is found within this script, set continueProcessing to false so no additional scope scripts are executed.
+		 * If a scope table match is not found, then the single record will be added by the global checkTable function.
+		 *
+		 * If the table extends another table and you prefer to get all extensions, uncomment the default processParentTable = true and the if
+		 * statement below it and set the table and function.
+		 */
+		
+		var continueProcessing = true;
+		var processParentTable = false;
+		
+		switch (tableName) {
+			case "sn_hr_core_service":
+				this._addHRService(tableRec, tableName);
+				continueProcessing = false;
+				break;
+			case "sn_hr_core_criteria":
+				this._addHRCriteria("sys_id", tableRec.getValue("sys_id"));
+				continueProcessing = false;
+				break;
+			case "sn_hr_core_template":
+				this._addHRTemplate(tableRec, tableName);
+				continueProcessing = false;
+				break;
+			case "sn_hr_core_topic_detail":
+				this._addTopicDetail(tableRec, tableName);
+				continueProcessing = false;
+				break;
+			default:
+				processParentTable = true;
+				break;
+		}
+		
+		if (processParentTable) {
+			// Check for table needs at parent table level
+			var tableBase = new global.addToUpdateSetUtils()._getTableBase(tableName);
+			switch (tableBase) {
+				case "sn_hr_core_document_template":
+					this._addHRDocumentTemplate(tableRec, tableName);
+					continueProcessing = false;
+					break;
+			}
+		}
+		
+		return continueProcessing;
+	},
+	
+	_addHRService: function(hrService, tableName) {
+		var recID;
+		if (typeof hrService == "string") {
+		recID = hrService;
+			hrService = new GlideRecord("sn_hr_core_service");
+			hrService.get(recID);
+		}
+		recID = hrService.getValue("sys_id");
+		this._addToSet(hrService);
+		this._addBadge(hrService.getValue("badge"));
+		this._addTopicDetail(hrService.getValue("topic_detail"));
+		this._addChecklist(hrService);
+		
+		var employeeDocumentType = hrService.getValue("employee_document_type");
+		if (!gs.nil(employeeDocumentType)) {
+			new sn_hr_ef.addToUpdateSetUtils()._addDocumentType(employeeDocumentType);
+		}
+		
+		var templateID = hrService.getValue("template");
+		if (!gs.nil(templateID)) {
+			this._addHRTemplate(templateID);
+		}
+		
+		var recordProducerID = hrService.getValue("producer");
+		if (!gs.nil(recordProducerID)) {
+			var recordProducer = hrService.producer.getRefRecord();
+			if (recordProducer.isValidRecord()) {
+				var userCriteriaList = new global.addToUpdateSetUtils()._addCatItem(recordProducer, recordProducer.getTableName());
+			}
+		}
+		
+		var hrCriteriaID = hrService.hr_criteria.toString();
+		if (!gs.nil(hrCriteriaID)) {
+			this._addHRCriteria("sys_id", hrCriteriaID);
+		}
+		
+		if (!gs.nil(hrService.getValue("case_creation_service_config"))) {
+			var caseCreationConfig = hrService.case_creation_service_config.getRefRecord();
+			this._addToSet(caseCreationConfig);
+		}
+		
+		var leType = hrService.getValue("le_type");
+		if (!gs.nil(leType)) {
+			new sn_hr_le.addToUpdateSetUtils()._addEventType(leType);
+		}
+		
+		//parent_service=20c4f2cb534073000ad0ddeeff7b1273^
+		var serviceActivity = new GlideRecord("sn_hr_core_service_activity");
+		serviceActivity.addQuery("parent_service", recID);
+		serviceActivity.query();
+		while (serviceActivity.next()) {
+			this._addToSet(serviceActivity);
+			
+			var activityType = serviceActivity.getValue("activity_type");
+			switch (activityType) {
+				case "task":
+					this._addHRTemplate(serviceActivity.getValue("child_template"));
+					break;
+				case "child":
+					this._addHRService(serviceActivity.getValue("child_hr_service"));
+					break;
+			}
+		}
+		
+		if (hrService.isValidField("flow") && !gs.nil(hrService.getValue("flow"))) {
+			new global.addToUpdateSetUtils()._addFlow(hrService.getValue("flow"));
+		}
+	},
+	
+	_addHRCriteria: function(queryField, queryValue) {
+		if (!gs.nil(queryValue)) {
+			var hrCriteria = new GlideRecord("sn_hr_core_criteria");
+			
+			if (hrCriteria.isValidField(queryField)) {
+				hrCriteria.addQuery(queryField, "IN", queryValue);
+				hrCriteria.query();
+				while (hrCriteria.next()) {
+					this._addToSet(hrCriteria);
+					
+					//Only add user_criteria if this function is adding HR Criteria first - searched by sys_id
+					if (queryField == "sys_id") {
+						var userCriteria = new GlideRecord("user_criteria");
+						if (userCriteria.get(hrCriteria.getValue("related_user_criteria"))) {
+							this._addToSet(userCriteria);
+						}
+					}
+
+					var hrCriteriaConditionM2M = new GlideRecord("sn_hr_core_m2m_condition_criteria");
+					hrCriteriaConditionM2M.addQuery("hr_criteria", hrCriteria.getValue("sys_id"));
+					hrCriteriaConditionM2M.query();
+					while (hrCriteriaConditionM2M.next()) {
+						this._addToSet(hrCriteriaConditionM2M);
+						var hrCriteriaCondition = hrCriteriaConditionM2M.hr_condition.getRefRecord();
+						this._addToSet(hrCriteriaCondition);
+					}
+				}
+			}
+		}
+	},
+	
+	_addHRTemplate: function(hrTemplate, tableName) {
+		if (typeof hrTemplate == "string") {
+			var recID = hrTemplate;
+			hrTemplate = new GlideRecord("sn_hr_core_template");
+			hrTemplate.get(recID);
+		}
+
+		this._addToSet(hrTemplate);
+		this._addChecklist(hrTemplate);
+
+		var templateObject = this._parseTemplateString(hrTemplate.template.toString());
+		if (!gs.nil(templateObject.pdf_template)) {
+			var hrPDFTemplate = new GlideRecord("sn_hr_core_document_template");
+			if (hrPDFTemplate.get(templateObject.pdf_template)) {
+				this._addHRDocumentTemplate(hrPDFTemplate.getValue("sys_id"), hrPDFTemplate.getValue("sys_class_name"));
+			}
+		}
+
+		if (!gs.nil(templateObject.workflow)) {
+			var workflow = new GlideRecord("wf_workflow");
+			if (workflow.get(templateObject.workflow)) {
+				new global.addToUpdateSetUtils()._addWorkflow(workflow);
+			}
+		}
+		
+		if (!gs.nil(templateObject.sn_esign_esignature_configuration)) {
+			var signatureTemplate = new GlideRecord("sn_esign_configuration");
+			if (signatureTemplate.get(templateObject.sn_esign_esignature_configuration)) {
+				this._addToSet(signatureTemplate);
+			}
+		}
+	},
+	
+	_addTopicDetail: function(topicDetail, tableName) {
+		if (typeof topicDetail == "string") {
+			var recID = topicDetail;
+			topicDetail = new GlideRecord("sn_hr_core_topic_detail");
+			topicDetail.get(recID);
+		}
+		this._addToSet(topicDetail);
+		
+		var topicCategory = new GlideRecord("sn_hr_core_topic_category");
+		if (topicCategory.get(topicDetail.getValue("topic_category"))) {
+			this._addToSet(topicCategory);
+		}
+	},
+	
+	_addHRDocumentTemplate: function(hrDocumentTemplate, tableName) {
+		var recID;
+		if (typeof hrDocumentTemplate == "string") {
+			recID = hrDocumentTemplate;
+			hrDocumentTemplate = new GlideRecord(tableName);
+			hrDocumentTemplate.get(recID);
+		}
+		this._addToSet(hrDocumentTemplate);
+		
+		var documentType = new GlideRecord("sn_hr_core_document_type");
+		if (documentType.get(hrDocumentTemplate.getValue("document_type"))) {
+			this._addToSet(documentType);
+		}
+		
+		recID = hrDocumentTemplate.getValue("sys_id");
+		this._addHRCriteria("sys_id", hrDocumentTemplate.getValue("hr_criteria"));
+
+		if (tableName == "sn_hr_core_pdf_template") {
+			var warningMessages = this.clientSession.getClientData("warningMessages") + "";
+			// split adding an extra comma so checking length
+			if (warningMessages == "null" || warningMessages.length == 0) {
+				warningMessages = [];
+			} else {
+				warningMessages = warningMessages.split(",");
+			}
+			
+			var pdfTemplateMapping = new GlideRecord("sn_hr_core_pdf_template_mapping");
+			pdfTemplateMapping.addQuery("document", hrDocumentTemplate.getValue("sys_id"));
+			pdfTemplateMapping.query();
+			while (pdfTemplateMapping.next()) {
+				this._addToSet(pdfTemplateMapping);
+				if (!gs.nil(pdfTemplateMapping.getValue("mapping_field")) && pdfTemplateMapping.mapping_field.toString().startsWith("u_")) {
+					var warningMessage = '<a href="' + hrDocumentTemplate.getLink() + '" target="_blank">' + hrDocumentTemplate.getDisplayValue() + ' ' + hrDocumentTemplate.getClassDisplayValue() + '</a>';
+					warningMessage = warningMessage + " contains template mappings to custom fields that may need to be added to your update set.";
+					if (warningMessages.indexOf(warningMessage) == -1) {
+						warningMessages.push(warningMessage);
+					}
+				}
+			}
+			this.clientSession.putClientData("warningMessages", warningMessages.toString());
+			
+			var documentRevision = hrDocumentTemplate.document_revision.getRefRecord();
+			this._addToSet(documentRevision);
+			
+			var documentRevisionID = documentRevision.getValue("sys_id"); 
+			var documentID = documentRevision.getValue("document"); 
+			
+			var managedDocument = new GlideRecord("dms_document");
+			if (managedDocument.get(documentID)) {
+				this._addToSet(managedDocument);
+				
+				// Get any additional revisions
+				documentRevision = new GlideRecord("dms_document_revision");
+				documentRevision.addQuery("document", documentID);
+				documentRevision.addQuery("sys_id", "!=", documentRevisionID);
+				documentRevision.query();
+				while (documentRevision.next()) {
+					this._addToSet(documentRevision);
+				}
+				
+				// Get E-Signature Template
+				var signatureTemplate = new GlideRecord("sn_esign_configuration");
+				signatureTemplate.addQuery("managed_document", documentID);
+				signatureTemplate.query();
+				if (signatureTemplate.next()) {
+					this._addToSet(signatureTemplate);
+				}
+			}
+		}
+	},
+	
+	// Helper function for global addToUpdateSetUtils to check for PDF document templates related to managed documents
+	_getHRDocumentTemplates: function(docRevisionID) {
+		var hrPDFTemplate = new GlideRecord("sn_hr_core_pdf_template");
+		hrPDFTemplate.addQuery("document_revision", docRevisionID);
+		hrPDFTemplate.query();
+		while (hrPDFTemplate.next()) {
+			this._addHRDocumentTemplate(hrPDFTemplate, hrPDFTemplate.getTableName());
+		}
+	},
+	
+	_addChecklist: function(tableRec) {
+		var checkList = new GlideRecord("checklist");
+		checkList.addQuery("document", tableRec.getValue("sys_id"));
+		checkList.addQuery("table", tableRec.getTableName());
+		checkList.query();
+		while (checkList.next()) {
+			this._addToSet(checkList);
+			var checkListItem = new GlideRecord("checklist_item");
+			checkListItem.addQuery("checklist", checkList.getValue("sys_id"));
+			checkListItem.query();
+			while (checkListItem.next()) {
+				this._addToSet(checkListItem);
+			}
+		}
+	},
+	
+	_addBadge: function(badgeID) {
+		var badge = new GlideRecord("sn_hr_core_badge");
+		if (badge.get(badgeID)) {
+			this._addToSet(badge);
+		}
+	},
+	
+	_addEmailContent: function(emailContentID) {
+		var emailContent = new GlideRecord("sn_hr_core_email_content");
+		if (emailContent.get(emailContentID)) {
+			this._addToSet(emailContent);
+		}
+	},
+	
+	_parseTemplateString: function(templateString) {
+		return new global.addToUpdateSetUtils().parseTemplateString(templateString);
+	},
+	
+	_addToSet: function(tableRec) {
+		new global.addToUpdateSetUtils().saveRecord(tableRec);
+	},
+
+    type: 'addToUpdateSetUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-24 18:32:46</sys_created_on>
+        <sys_id>b96ed42e4fdda740d1676bd18110c7a4</sys_id>
+        <sys_mod_count>63</sys_mod_count>
+        <sys_name>addToUpdateSetUtils</sys_name>
+        <sys_package display_value="Human Resources: Core" source="sn_hr_core">d4ac3fff5b311200a4656ede91f91af2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_update_name>sys_script_include_b96ed42e4fdda740d1676bd18110c7a4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-11 17:50:01</sys_updated_on>
+    </sys_script_include>
+</record_update>
