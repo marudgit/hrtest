@@ -26,6 +26,7 @@
         <ignore_price>true</ignore_price>
         <image/>
         <location/>
+        <make_item_non_conversational>false</make_item_non_conversational>
         <mandatory_attachment>true</mandatory_attachment>
         <meta/>
         <mobile_hide_price>false</mobile_hide_price>
@@ -42,6 +43,7 @@
         <no_proceed_checkout>false</no_proceed_checkout>
         <no_quantity>false</no_quantity>
         <no_quantity_v2>false</no_quantity_v2>
+        <no_save_as_draft>false</no_save_as_draft>
         <no_search>false</no_search>
         <no_wishlist_v2>false</no_wishlist_v2>
         <omit_price>false</omit_price>
@@ -97,6 +99,7 @@
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
+        <version/>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
@@ -185,4 +188,18 @@
         <sys_created_on>2021-11-09 17:02:39</sys_created_on>
         <sys_id>b2c13a1c877bf810156265b73cbb3588</sys_id>
     </sys_attachment_doc>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</claim_owner_scope>
+        <claim_timestamp>1949a9c22860000001</claim_timestamp>
+        <metadata_update_name>sc_cat_item_producer_c978668b87637410156265b73cbb3574</metadata_update_name>
+        <previous_claim_app_version>19.0.0</previous_claim_app_version>
+        <previous_claim_name>Human Resources: Core</previous_claim_name>
+        <previous_claim_scope>d4ac3fff5b311200a4656ede91f91af2</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-24 23:18:31</sys_created_on>
+        <sys_id>ff1f2b6197d39a9058ba35f6f053af1a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-24 23:18:31</sys_updated_on>
+    </sys_claim>
 </record_update>

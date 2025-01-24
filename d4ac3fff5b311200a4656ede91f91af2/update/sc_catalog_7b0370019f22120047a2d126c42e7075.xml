@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sc_catalog">
     <sc_catalog action="INSERT_OR_UPDATE">
         <active>true</active>
-        <background_color>#FFFFFF</background_color>
         <description>Human Resources Catalog</description>
         <desktop_continue_shopping/>
         <desktop_home_page/>
@@ -24,4 +23,18 @@
         <title>Human Resources Catalog</title>
     </sc_catalog>
     <sys_translated_text action="delete_multiple" query="documentkey=7b0370019f22120047a2d126c42e7075"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</claim_owner_scope>
+        <claim_timestamp>1949a9c23130000001</claim_timestamp>
+        <metadata_update_name>sc_catalog_7b0370019f22120047a2d126c42e7075</metadata_update_name>
+        <previous_claim_app_version>19.0.0</previous_claim_app_version>
+        <previous_claim_name>Human Resources: Core</previous_claim_name>
+        <previous_claim_scope>d4ac3fff5b311200a4656ede91f91af2</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-24 23:18:31</sys_created_on>
+        <sys_id>bb1f2b6197d39a9058ba35f6f053af2b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-24 23:18:31</sys_updated_on>
+    </sys_claim>
 </record_update>

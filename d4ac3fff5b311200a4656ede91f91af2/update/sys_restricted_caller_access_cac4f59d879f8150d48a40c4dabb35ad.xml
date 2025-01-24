@@ -25,4 +25,18 @@
         <target_table>sys_scope</target_table>
         <target_type>3</target_type>
     </sys_restricted_caller_access>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</claim_owner_scope>
+        <claim_timestamp>1949a9c246c0000001</claim_timestamp>
+        <metadata_update_name>sys_restricted_caller_access_cac4f59d879f8150d48a40c4dabb35ad</metadata_update_name>
+        <previous_claim_app_version>19.0.0</previous_claim_app_version>
+        <previous_claim_name>Human Resources: Core</previous_claim_name>
+        <previous_claim_scope>d4ac3fff5b311200a4656ede91f91af2</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-24 23:18:31</sys_created_on>
+        <sys_id>b31f2b6197d39a9058ba35f6f053af62</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-24 23:18:31</sys_updated_on>
+    </sys_claim>
 </record_update>

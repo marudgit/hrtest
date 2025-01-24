@@ -4,7 +4,7 @@
         <operation>create</operation>
         <rca_type>generated</rca_type>
         <source>9697454147b41d9049ed998c346d43bd</source>
-        <source_scope display_value="Workforce Optimization for HR">40840c842ea10110c3e6c300127d212f</source_scope>
+        <source_scope display_value="">40840c842ea10110c3e6c300127d212f</source_scope>
         <source_table>sys_script_include</source_table>
         <source_type>2</source_type>
         <status>2</status>
@@ -20,9 +20,23 @@
         <sys_update_name>sys_restricted_caller_access_8cc00a678799611041dd4339dabb35fa</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-03-07 09:53:28</sys_updated_on>
-        <target name="sn_hr_core_case_total_rewards" target_table="sys_db_object">2d3a856f87d161103824ec2e0ebb350b</target>
+        <target name="sn_hr_core_case_total_rewards" target_table="sys_db_object">fa1706a81b616510aa70eb17b04bcbd7</target>
         <target_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</target_scope>
         <target_table>sys_db_object</target_table>
         <target_type>1</target_type>
     </sys_restricted_caller_access>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</claim_owner_scope>
+        <claim_timestamp>1949a9c22680000001</claim_timestamp>
+        <metadata_update_name>sys_restricted_caller_access_8cc00a678799611041dd4339dabb35fa</metadata_update_name>
+        <previous_claim_app_version>19.0.0</previous_claim_app_version>
+        <previous_claim_name>Human Resources: Core</previous_claim_name>
+        <previous_claim_scope>d4ac3fff5b311200a4656ede91f91af2</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-24 23:18:31</sys_created_on>
+        <sys_id>ff1f2b6197d39a9058ba35f6f053af16</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-24 23:18:31</sys_updated_on>
+    </sys_claim>
 </record_update>

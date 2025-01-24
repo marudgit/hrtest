@@ -46,4 +46,18 @@
         <user display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</user>
         <view/>
     </sn_hr_core_template>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</claim_owner_scope>
+        <claim_timestamp>1949a9c21d80000001</claim_timestamp>
+        <metadata_update_name>sn_hr_core_template_4978668b87637410156265b73cbb3572</metadata_update_name>
+        <previous_claim_app_version>19.0.0</previous_claim_app_version>
+        <previous_claim_name>Human Resources: Core</previous_claim_name>
+        <previous_claim_scope>d4ac3fff5b311200a4656ede91f91af2</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-24 23:18:31</sys_created_on>
+        <sys_id>bf1f2b6197d39a9058ba35f6f053af04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-24 23:18:31</sys_updated_on>
+    </sys_claim>
 </record_update>

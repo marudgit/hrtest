@@ -6,6 +6,7 @@
         <dataset_language>en</dataset_language>
         <fields/>
         <filter/>
+        <pretrained>false</pretrained>
         <request_source>api</request_source>
         <solution_label>ml_x_snc_sn_hr_core_global_d802024e1b53a050fa5f63142a4bcb46</solution_label>
         <solution_name>ml_x_snc_sn_hr_core_global_d802024e1b53a050fa5f63142a4bcb46</solution_name>
@@ -28,6 +29,21 @@
         <sys_updated_on>2021-11-16 08:08:27</sys_updated_on>
         <table/>
         <training_frequency>run_once</training_frequency>
+        <triggered_source/>
         <word_vector_corpus/>
     </ml_capability_definition_base>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</claim_owner_scope>
+        <claim_timestamp>1949a9c24d90000001</claim_timestamp>
+        <metadata_update_name>ml_capability_definition_base_5c02024e1b53a050fa5f63142a4bcb47</metadata_update_name>
+        <previous_claim_app_version>19.0.0</previous_claim_app_version>
+        <previous_claim_name>Human Resources: Core</previous_claim_name>
+        <previous_claim_scope>d4ac3fff5b311200a4656ede91f91af2</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-24 23:18:31</sys_created_on>
+        <sys_id>c42f2b6197d39a9058ba35f6f053af70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-24 23:18:31</sys_updated_on>
+    </sys_claim>
 </record_update>

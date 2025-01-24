@@ -7,7 +7,9 @@
         <client_callable>false</client_callable>
         <description>Version 3.4&#13;
 Utility script to add components to update sets</description>
+        <mobile_callable>false</mobile_callable>
         <name>addToUpdateSetUtils</name>
+        <sandbox_callable>false</sandbox_callable>
         <script><![CDATA[var addToUpdateSetUtils = Class.create();
 addToUpdateSetUtils.prototype = {
     initialize: function() {
@@ -345,4 +347,18 @@ addToUpdateSetUtils.prototype = {
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2020-09-11 17:50:01</sys_updated_on>
     </sys_script_include>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</claim_owner_scope>
+        <claim_timestamp>1949a9c213f0000001</claim_timestamp>
+        <metadata_update_name>sys_script_include_b96ed42e4fdda740d1676bd18110c7a4</metadata_update_name>
+        <previous_claim_app_version>19.0.0</previous_claim_app_version>
+        <previous_claim_name>Human Resources: Core</previous_claim_name>
+        <previous_claim_scope>d4ac3fff5b311200a4656ede91f91af2</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-24 23:18:30</sys_created_on>
+        <sys_id>371fe76197d39a9058ba35f6f053afee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-24 23:18:30</sys_updated_on>
+    </sys_claim>
 </record_update>

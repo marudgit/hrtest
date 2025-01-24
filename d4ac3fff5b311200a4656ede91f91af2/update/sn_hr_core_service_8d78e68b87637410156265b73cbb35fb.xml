@@ -2,21 +2,17 @@
     <sn_hr_core_service action="INSERT_OR_UPDATE">
         <active>true</active>
         <approval_options/>
-        <at_a_glance_uib_view/>
-        <at_a_glance_view display_value="At a Glance" name="ataglance">bca2a4f3b73333001d69c2daee11a9bb</at_a_glance_view>
         <auto_close_case>false</auto_close_case>
         <auto_close_offset/>
-        <auto_move_attachments>false</auto_move_attachments>
         <badge/>
         <case_creation_service_config/>
         <case_options>c2d25d092f232200a9e7a310c18c954c,64e89b75531312003066a5f4a11c08b3</case_options>
         <close_when/>
         <description/>
-        <employee_document_type/>
         <flow display_value="Classification Request">61cee64387a37410156265b73cbb3531</flow>
         <fulfillment_instructions/>
         <fulfillment_type>flow</fulfillment_type>
-        <header_config_opened_for display_value="Return to Workplace for opened for/approver">86d9872eb3900300f5302ddc16a8dc8b</header_config_opened_for>
+        <header_config_opened_for display_value="Default for opened for/approver">86d9872eb3900300f5302ddc16a8dc8b</header_config_opened_for>
         <header_config_subject_person display_value="Default for subject person/task assigned to">c4e9872eb3900300f5302ddc16a8dc91</header_config_subject_person>
         <hr_criteria/>
         <journey_config/>
@@ -42,9 +38,22 @@
         <sys_updated_on>2021-11-08 16:02:51</sys_updated_on>
         <template display_value="Classification Request">4978668b87637410156265b73cbb3572</template>
         <topic_detail display_value="Classification Request">c991ee8f87237410156265b73cbb35aa</topic_detail>
-        <u_return_date/>
         <value>classification_request</value>
         <workflow_detail/>
     </sn_hr_core_service>
     <sys_translated_text action="delete_multiple" query="documentkey=8d78e68b87637410156265b73cbb35fb"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</claim_owner_scope>
+        <claim_timestamp>1949a9c22510000001</claim_timestamp>
+        <metadata_update_name>sn_hr_core_service_8d78e68b87637410156265b73cbb35fb</metadata_update_name>
+        <previous_claim_app_version>19.0.0</previous_claim_app_version>
+        <previous_claim_name>Human Resources: Core</previous_claim_name>
+        <previous_claim_scope>d4ac3fff5b311200a4656ede91f91af2</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-24 23:18:31</sys_created_on>
+        <sys_id>771f2b6197d39a9058ba35f6f053af14</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-24 23:18:31</sys_updated_on>
+    </sys_claim>
 </record_update>

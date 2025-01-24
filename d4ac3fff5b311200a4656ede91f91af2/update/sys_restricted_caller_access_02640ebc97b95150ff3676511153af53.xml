@@ -20,9 +20,23 @@
         <sys_update_name>sys_restricted_caller_access_02640ebc97b95150ff3676511153af53</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2023-03-01 10:53:29</sys_updated_on>
-        <target name="sn_hr_core_document_template" target_table="sys_db_object">58a8ed6187956110559887b09bbb359f</target>
+        <target name="sn_hr_core_document_template" target_table="sys_db_object">622702e81b616510aa70eb17b04bcba8</target>
         <target_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</target_scope>
         <target_table>sys_db_object</target_table>
         <target_type>1</target_type>
     </sys_restricted_caller_access>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</claim_owner_scope>
+        <claim_timestamp>1949a9c24c50000001</claim_timestamp>
+        <metadata_update_name>sys_restricted_caller_access_02640ebc97b95150ff3676511153af53</metadata_update_name>
+        <previous_claim_app_version>19.0.0</previous_claim_app_version>
+        <previous_claim_name>Human Resources: Core</previous_claim_name>
+        <previous_claim_scope>d4ac3fff5b311200a4656ede91f91af2</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-24 23:18:31</sys_created_on>
+        <sys_id>fb1f2b6197d39a9058ba35f6f053af6d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-24 23:18:31</sys_updated_on>
+    </sys_claim>
 </record_update>
