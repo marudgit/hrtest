@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_hr_core_coe_security_policy">
+    <sn_hr_core_coe_security_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <all_services>true</all_services>
+        <applies_to_all_child_coes>false</applies_to_all_child_coes>
+        <applies_when/>
+        <coe>sn_hr_core_case</coe>
+        <policy_name>MR Test Policy</policy_name>
+        <services/>
+        <short_description>test</short_description>
+        <sys_class_name>sn_hr_core_coe_security_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-24 23:21:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>f3af6b6197d39a9058ba35f6f053af10</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>MR Test Policy</sys_name>
+        <sys_package display_value="Human Resources: Core" source="sn_hr_core">d4ac3fff5b311200a4656ede91f91af2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_update_name>sn_hr_core_coe_security_policy_f3af6b6197d39a9058ba35f6f053af10</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-24 23:21:22</sys_updated_on>
+        <type>read</type>
+    </sn_hr_core_coe_security_policy>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</claim_owner_scope>
+        <claim_timestamp>1949a9fa3a30000001</claim_timestamp>
+        <metadata_update_name>sn_hr_core_coe_security_policy_f3af6b6197d39a9058ba35f6f053af10</metadata_update_name>
+        <previous_claim_app_version>19.0.0</previous_claim_app_version>
+        <previous_claim_name>Human Resources: Core</previous_claim_name>
+        <previous_claim_scope>d4ac3fff5b311200a4656ede91f91af2</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-24 23:22:20</sys_created_on>
+        <sys_id>7bff236597d39a9058ba35f6f053af61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-24 23:22:20</sys_updated_on>
+    </sys_claim>
+</record_update>

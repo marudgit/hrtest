@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_restricted_caller_access">
+    <sys_restricted_caller_access action="DELETE">
+        <description/>
+        <operation>read</operation>
+        <rca_type>generated</rca_type>
+        <source>defcb291eb031110226ed5c152522873</source>
+        <source_scope display_value="Manager Hub">d20a85536b30011024ca2421ee44affa</source_scope>
+        <source_table>sn_pp_signal_data_source</source_table>
+        <source_type>10</source_type>
+        <status>2</status>
+        <sys_class_name>sys_restricted_caller_access</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2023-03-15 10:03:07</sys_created_on>
+        <sys_id>7c663d921ba56d10c7496352604bcba4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>d20a85536b30011024ca2421ee44affa</sys_name>
+        <sys_package display_value="Human Resources: Core" source="sn_hr_core">d4ac3fff5b311200a4656ede91f91af2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_update_name>sys_restricted_caller_access_7c663d921ba56d10c7496352604bcba4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-15 10:31:30</sys_updated_on>
+        <target name="sn_hr_core_case" target_table="sys_db_object">1217c2a81b616510aa70eb17b04bcbd2</target>
+        <target_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</target_scope>
+        <target_table>sys_db_object</target_table>
+        <target_type>1</target_type>
+    </sys_restricted_caller_access>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</application>
+        <file_path/>
+        <instance_id>2c00cb60a5508540af9588dc6711e83d</instance_id>
+        <instance_name>maternadev1</instance_name>
+        <name>sys_restricted_caller_access_7c663d921ba56d10c7496352604bcba4</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_restricted_caller_access"><sys_restricted_caller_access action="INSERT_OR_UPDATE"><description/><operation>read</operation><rca_type>generated</rca_type><source>defcb291eb031110226ed5c152522873</source><source_scope display_value="Manager Hub">d20a85536b30011024ca2421ee44affa</source_scope><source_table>sn_pp_signal_data_source</source_table><source_type>10</source_type><status>2</status><sys_class_name>sys_restricted_caller_access</sys_class_name><sys_created_by>system</sys_created_by><sys_created_on>2023-03-15 10:03:07</sys_created_on><sys_id>7c663d921ba56d10c7496352604bcba4</sys_id><sys_mod_count>1</sys_mod_count><sys_name>d20a85536b30011024ca2421ee44affa</sys_name><sys_package display_value="Human Resources: Core" source="sn_hr_core">d4ac3fff5b311200a4656ede91f91af2</sys_package><sys_policy/><sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope><sys_update_name>sys_restricted_caller_access_7c663d921ba56d10c7496352604bcba4</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-03-15 10:31:30</sys_updated_on><target name="sn_hr_core_case" target_table="sys_db_object">1217c2a81b616510aa70eb17b04bcbd2</target><target_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</target_scope><target_table>sys_db_object</target_table><target_type>1</target_type></sys_restricted_caller_access></record_update>]]></payload>
+        <payload_hash>-1309672529</payload_hash>
+        <record_name>d20a85536b30011024ca2421ee44affa</record_name>
+        <reverted_from/>
+        <source>8cecbd5e1b61ad10aa70eb17b04bcb3e</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-03-15 10:31:30</sys_created_on>
+        <sys_id>a4ecfd5e1b61ad10aa70eb17b04bcb07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>186e4d32e8f0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-03-15 10:31:30</sys_updated_on>
+        <type>Restricted Caller Access Privilege</type>
+        <update_guid>2cecfd5ec061ad1038e1d3ee49f43506</update_guid>
+        <update_guid_history>2cecfd5ec061ad1038e1d3ee49f43506:-1309672529,fc663d92efa56d102090e45822c576a5:405208109</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-08-07 23:35:19</sys_created_on>
+        <sys_db_object display_value="" name="sys_restricted_caller_access">sys_restricted_caller_access</sys_db_object>
+        <sys_id>079bef9947874e00820aaf43b3404000</sys_id>
+        <sys_metadata>7c663d921ba56d10c7496352604bcba4</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>d20a85536b30011024ca2421ee44affa</sys_name>
+        <sys_package display_value="Human Resources: Core" source="sn_hr_core">d4ac3fff5b311200a4656ede91f91af2</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</sys_scope>
+        <sys_scope_delete display_value="">6508b4d4a71c4123bd18496a279643b9</sys_scope_delete>
+        <sys_update_name>sys_restricted_caller_access_7c663d921ba56d10c7496352604bcba4</sys_update_name>
+        <sys_update_version display_value="sys_restricted_caller_access_7c663d921ba56d10c7496352604bcba4">a4ecfd5e1b61ad10aa70eb17b04bcb07</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-08-07 23:35:19</sys_updated_on>
+    </sys_metadata_delete>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Human Resources: Core">d4ac3fff5b311200a4656ede91f91af2</claim_owner_scope>
+        <claim_timestamp>1949a9c20c40000001</claim_timestamp>
+        <metadata_update_name>sys_restricted_caller_access_7c663d921ba56d10c7496352604bcba4</metadata_update_name>
+        <previous_claim_app_version>19.0.0</previous_claim_app_version>
+        <previous_claim_name>Human Resources: Core</previous_claim_name>
+        <previous_claim_scope>d4ac3fff5b311200a4656ede91f91af2</previous_claim_scope>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-24 23:18:30</sys_created_on>
+        <sys_id>2b1fe76197d39a9058ba35f6f053afe0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-24 23:18:30</sys_updated_on>
+    </sys_claim>
+</record_update>
